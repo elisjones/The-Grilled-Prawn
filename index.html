@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>
+		The Grilled Prawn 
+	</title>
+
+<!-- Imports -->
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/indexMobile.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<script src="js/index.js"></script>
+
+</head>
+
+<!-- Load the recipes from the javascript file -->
+<body onload="populateRecipes()">
+
+<!-- #1 Banner Section -->
+<div id="logo">
+	
+	<img id="logoImage" src="img/GrilledPrawnLogo.png">
+
+	<span id="logoText"> The Grilled Prawn </span>
+
+</div> 
+
+<!-- These line breaks fill the gap between the logo div and the base of the banner text options -->
+<div class="bannerContainer"> <br><br>
+
+	<div id="bannerContainerLeft"> 
+				
+	</div> 
+
+	<div id="bannerContainerRight"> 
+
+		<div id="menuContainer"> 
+					
+			<a class="menuItem"> RECIPES </a>
+			<a class="menuItem"> DRINKS </a>
+			<a class="menuItem"> DECORATIONS </a>
+			<a class="menuItem"> ABOUT THE GRILLED PRAWN </a>
+			<a class="icon">&#9776;</a> 
+				
+		</div> 
+	
+	</div> 
+
+</div>
+
+<!-- Under banner -->
+<br><br><br><br>
+
+<!-- Header Image -->
+<div id="headerContainer" style="background-image: url(img/Header.png); background-size: cover;">
+
+	<!-- Mobile friendly text for the banner -->
+	<div id="headerTextContainerMobile"> 
+			
+		<div id="containerMF">
+
+			<div class="headerMF2"> LATEST RECIPE </div>
+			<div class="headerMF1" id="mobileHeader"> <b> Baked Polenta </b> </div>
+			<div class="headerMF2"> Polenta, goat cheese, Italian sausage, and cremini mushrooms. All together, this will make for a pretty darn good side dish to a lovely salad. Go for it! </div>
+			<div class="headerMF2"> <b> See Recipe </b> </div>
+		
+		</div>
+	
+	</div>
+
+	<!-- Desktop text for the banner -->
+	<div id="headerBackground">
+
+		<div id="headerText">
+
+			<div class="headerH2"> LATEST RECIPE </div>
+			<div class="headerH1"> <b> Baked Polenta with <br> Cheese and Mushrooms.</b> </div> 
+			<div class="headerH2"> Polenta, goat cheese, Italian sausage, and cremini mushrooms. All together, this will make for a pretty darn good side dish to a lovely salad. Go for it! </div>
+			<button class="headerButton" type="button"> Go to Recipe &#x2192 </button>  
+			
+		</div>
+
+	</div>
+
+</div>
+
+<!-- #2 Filtering/Sorting Section -->
+<a id="anchor"></a>
+
+<div id="ourRecipesContainer">
+
+	<div id="ourRecipesHeader" class="headerH1"> 
+
+		Our Recipes 
+
+	</div>
+
+	<div id="sortOptionsContainer"> 
+
+		<!-- Mobile friendly sort options -->
+		<div id="sortOptionsContainerMBF"> 
+
+			<hr> Filter & Sort <a class="icon" id="icon2">&#9776;</a> <hr> 
+
+		</div>  
+
+		<!-- Desktop sort options -->
+		<div id="filterContainer"> 
+
+		 	<span id="filterText"> Filter recipes by </span>
+			
+			<button type="button" id="filterContainerButton" onclick="expandBox();"> &#8213; </button>
+
+		</div>
+
+		<div id="sortContainer"> 
+
+			<span id="sortText"> Sort by </span>
+
+			<select id="dropdown">
+
+				<option value="Newest First"> Newest First </option>
+				<option value="Newest First"> Oldest First </option>
+				<option value="Newest First"> Price Low to High </option>
+				<option value="Newest First"> Price High to Low </option>
+
+			</select>
+
+		</div>
+
+		<div id="searchContainer"> 
+
+			<input type="text" placeholder="&#x1F50D; Search Recipe"> 
+
+		</div>
+
+	</div>
+
+	<!-- The filter and sorting menu for desktop -->
+	<div id="expandableBoxContainer">
+
+		<div id="expandableBox">
+
+			<div id="expandableBoxLeftSection">
+
+				<span id="foodtype"> Food type: </span>
+
+				<form action="" id="foodTypeForm2">
+
+					  <input type="radio" onclick="filterSelection('Appetisers')" value="Appetisers"> <label> Appetisers </label> <br>
+					  <input type="radio" onclick="filterSelection('Mains')" value="Mains"> <label> Mains </label><br>
+					  <input type="radio" onclick="filterSelection('Desserts')" value="Desserts"> <label>Desserts</label> <br>
+					  <input type="radio" onclick="filterSelection('Special Occasions')" value="Special Occasions"> <label>Special Occasions </label><br>
+
+				</form>
+
+			</div>
+
+			<div id="expandableBoxRightSection">
+
+				<div id="expandableBoxForm">
+
+					<span id="nationality"> Nationality: </span>
+
+					<form action="" id="foodTypeForm2">
+
+						  <input type="radio" onclick="filterSelection('Italian')" value="Italian"> <label> Italian </label><br>
+						  <input type="radio" onclick="filterSelection('French')" value="French"> <label>French </label><br>
+						  <input type="radio" onclick="filterSelection('Spanish')" value="Spanish"><label> Spanish </label><br>
+						  <input type="radio" onclick="filterSelection('Peruvian')" value="Peruvian"> <label>Peruvian </label><br>
+
+					</form> 
+
+				</div>
+
+				<div id="expandableBoxForm"> <br>
+
+					<form action="" id="foodTypeForm2">
+
+						  <input type="radio" onclick="filterSelection('Chinese')" value="Chinese"> <label>Chinese </label><br>
+						  <input type="radio" onclick="filterSelection('Indian')" value="Indian"> <label>Indian </label><br>
+						  <input type="radio" onclick="filterSelection('Thai')" value="Thai"> <label>Thai </label><br>
+						  <input type="radio" onclick="filterSelection('Norwegian')" value="Norwegian"> <label>Norwegian </label><br>
+
+					</form> 
+
+				</div>
+
+				<div id="expandableBoxForm"> <br>
+
+					<form action="" id="foodTypeForm2">
+
+						  <input type="radio" onclick="filterSelection('Polish')" value="Polish"> <label>Polish </label><br>
+						  <input type="radio" onclick="filterSelection('Danish')" value="Danish"> <label>Danish </label><br>
+						  <input type="radio" onclick="filterSelection('Belgian')" value="Belgian"> <label>Belgian </label><br>
+						  <input type="radio" onclick="filterSelection('Persian')" value="Persian"> <label>Persian </label><br>
+
+					</form> 
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- #3 Recipe List Section -->
+<div id="itemsListContainer">
+
+	<!-- This div is populated with the recipes from the JavaScript file -->
+	<div id="itemsList">
+
+	</div>
+		
+</div>
+
+<div id="returnToTop"> 
+
+	<a href="#anchor"> Return to the top </a>
+
+</div>
+
+<!-- #4 Newsletter Section/Add Friends Section -->
+<div id="addFriendSectionContainer">
+
+	<div id="addFriendSection">
+
+		<div id="addFriendTitleContainer">
+
+			<div id="addFriendTitle"> 
+
+				Spread the word! 
+
+			</div>
+
+			<div  id="addFriendText"> 
+
+				Our recipes are awesome, sign up to the newsletter <br> 
+				and invite friends to join The Grilled Prawn cult. 
+
+			</div>
+
+		</div>
+
+		<!-- These divs display the labels and text-input fields for the sign-up section -->
+		<div id="firstFriendDetailsContainer"> 
+
+			<div id="firstNameContainer">
+
+				<div id="firstNameLabel"> 
+
+						Name 
+
+				</div>
+
+				<input type="text" class="textInput" id="firstNameValue" placeholder="Samantha"> 
+
+			</div>
+
+			<div id="secondNameContainer">
+
+				<div id="secondNameLabel"> 
+
+						Surname 
+
+				</div>
+
+				<input type="text" class="textInput" id="secondNameValue" placeholder="Smith"> 
+
+			</div>
+				
+			<div id="emailContainer">
+
+				<div id="emailLabel"> 
+
+						Email 
+
+				</div>
+
+				<input type="text" class="textInput" id="emailValue" placeholder="Samantha@smith.com"> 
+
+			</div>	
+
+			<div id="buttonContainer">
+
+				<div id="addFriendButton">
+
+					<button type="button" class="headerButton" onclick="addFriend();"> Add Friend </button>
+
+				</div>
+
+			</div>	
+
+		</div>
+
+		<div id="line">
+			
+			<hr>
+
+		</div>
+
+	</div>
+
+	<!-- This div displays the submit button below the friend details -->
+	<div id="submitButtonContainer">
+
+		<button type="button" id="sendButton" class="headerButton"> Send &#x2192 </button>
+
+	</div>
+
+</div>
+
+<!-- #5 Footer Section -->
+<div id="footerContainer">
+
+	<!-- Mobile friendly footer -->
+	<div id="footerMBF"> 
+
+		<span id="footerLeft"> 
+
+			&copy; The Grilled Prawn 
+
+		</span>
+
+		<span id="footerRight"> 
+
+			More Info 
+
+		</span>
+
+	</div>
+
+	<!-- Desktop footer -->
+	<div class="section">
+
+		<div class="headerH3"> 
+
+			Our Recipes 
+
+		</div>
+
+		<div class="headerH4"> 
+
+			All our recipes are tested thoroughly by us to make sure they’re suitable for your kitchen at home. 
+			We know many of you are concerned about healthy eating, so we send them to a qualified nutritionist 
+			for thorough analysis too. Browse our recipes now 
+
+		</div>
+
+	</div>
+
+	<div class="section">
+
+		<div class="headerH3"> 
+
+			Grilled Prawn's History 
+
+		</div>
+
+		<div class="headerH4"> 
+
+			The Grilled Prawn is a fictional food blog created in January 2015.
+ 		</div>
+
+	</div>
+
+	<div class="section">
+
+		<div class="headerH3"> 
+
+			Tips and Tricks 
+
+		</div>
+
+		<div class="headerH4"> 
+
+			Not sure how to do something? Don’t panic. We have plenty of tutorials for you. <br> <br>
+			
+			<span style="color:#FF5252"> 
+
+				Learn more 
+
+			</span> 
+
+		</div>
+
+	</div>
+
+	<div class="section">
+
+		<div class="headerH3"> 
+
+			Help and Contact 
+
+		</div>
+
+		<div class="headerH4"> 
+
+			Struggling with one of the recipes? <br><br>
+
+			<span style="color:#FF5252"> 
+
+				Send us an email 
+
+			</span> <br><br>
+
+			We are always happy to try new things, send us your suggestions! <br><br>
+
+			<span style="color:#FF5252"> 
+
+				Fill in the form 
+
+			</span> 
+
+		</div>
+
+	</div>
+
+	<div class="section">
+
+		<div class="headerH3"> 
+
+			&copy; The Grilled Prawn 
+
+		</div>
+
+		<div class="headerH4"> 
+
+			The images and recipes ideas were taken from spoonforkbacon.com and the icons from Google Material Icons. 
+
+		</div>
+
+	</div>
+
+</div>
+
+</body>
