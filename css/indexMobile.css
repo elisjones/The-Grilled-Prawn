@@ -1,0 +1,129 @@
+/* MOBILE FRIENDLY */
+@media screen and (max-width: 950px){
+  .bannerContainer a {
+  		display: none;
+    }
+
+  .bannerContainer a.icon{
+    	float: right;
+    	display: block;
+    }
+
+    .section{
+    	display: none;
+    }
+
+    #returnToTop{
+    	text-align: center;
+    }
+
+    #addFriendTitleContainer{
+    	text-align: center;
+    }
+
+    #filterContainer{
+    	display: none;
+    }
+
+    #sortContainer{
+    	display: none;
+    }
+
+    #searchContainer{
+    	display: none;
+    }
+
+    #expandableBoxContainer{
+    	display: none;
+    }
+
+    #sortOptionsContainerMBF{
+    	text-align: center;
+    }
+
+   	#headerBackground{
+   		display:none;
+    }
+
+   	#firstFriendDetailsContainer{
+	   	width: 90%;
+	   	text-align: center;
+     }
+
+   	#firstNameContainer{
+   		width:100%;
+    }
+
+   	#secondNameContainer{
+   		width: 90%;
+    }
+
+   	#emailContainer{
+   		width: 90%;
+    }
+
+   	#buttonContainer{
+   	  width: 90%;
+    }
+
+   	#headerTextContainerMobile{
+	   	display: block;
+	  	height:50vh;
+	  	text-align: center;
+	  	background-color: rgba(0,0,0,0.5);
+	  	color: white;
+    }
+
+   	#ourRecipesHeader{
+	   	text-align: center;
+	    width:90%;
+    }
+}
+
+/* DO NOT LOAD THE MOBILE FRIENDLY TEXT UNTIL SCREEN IS SMALLER */
+@media screen and (min-width: 950px){
+    #headerTextContainerMobile{
+      display: none;
+    }
+
+    #sortOptionsContainerMBF{
+      display: none;
+    }
+
+    #footerMBF{
+      display: none;
+    }
+}
+
+#containerMF{
+  padding-top: 15%;
+}
+
+.headerMF1{
+  font-size: 200%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.headerMF2{
+  margin-bottom: 1%;
+  margin-left: 25%;
+  margin-right: 25%;  
+}
+
+#footerMBF{
+  background-color: #EEEEEE;
+  margin-top: 2.5%;
+}
+
+.bannerContainer .icon {
+    display: none;
+}
+
+.icon{
+  padding-right: 5%;
+}
+
+#icon2{
+  padding-right: 0%;
+}

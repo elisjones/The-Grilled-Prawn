@@ -1,0 +1,350 @@
+body{
+	background-color: #EEEEEE;
+	font-family:'Roboto', sans-serif;
+	margin: 0;
+	width:100%;
+	height: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+/*************** #1 Banner Section ***************/
+#logo{
+	top: 1%;
+	left:5%;
+	z-index: 5; 
+	position: fixed;
+}
+
+#logoImage{	
+	max-width: 40%;
+	vertical-align: middle;
+}
+
+#logoText{
+	color: #F44336;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.bannerContainer{
+	z-index: 3;
+	background-color: rgba(255,255,255, 0.9);
+	position: fixed;
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+/* LEFT SECTION IS 25% of WIDTH - IT CANNOT GO SMALLER */
+#bannerContainerLeft{
+	float:left;
+	text-align: center;
+	min-width: 25%;
+}
+
+/* RIGHT SECTION IS 75% OF WIDTH - IT CANNOT GO BIGGER */
+#bannerContainerRight{
+	float:right;
+	width:75%;
+}
+
+
+#menuContainer{
+	color: #424242;
+	vertical-align: middle;
+	text-align: right;
+}	
+
+.menuItem{
+	margin-right: 6.5%;
+}
+
+#headerContainer{
+	width:100%;
+	height:50vh;
+}
+
+#headerBackground{
+	float: right;	
+	width:30%;
+	height:100%;
+	background-color: #F44336;
+}
+
+#headerText{
+	margin-top: 5%;
+	margin-left:5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+
+.headerH1{
+	line-height: 1.25em;
+	color: white;
+	font-size: 200%;
+}
+
+.headerH2{
+	line-height: 1.5em;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	color: white;
+}
+
+.headerButton{
+	border-radius: 5px;
+	background-color: #FAFAFA;
+	height: 5vh;
+}
+
+/*************** #2 Filtering/Sorting Section ***************/
+#ourRecipesContainer{
+	width:100%;
+}
+
+#ourRecipesHeader{
+	color: #424242;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	margin-left: 5%;
+}
+
+#sortOptionsContainer{
+	color: #424242;
+	font-size: 80%;
+	width:100%;
+	overflow: auto;	
+}
+
+#filterContainer{
+	color: white;
+	background-color: #FF5252;
+	border-radius: 5px;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	margin-left: 5%;
+	float:left;
+	width:22.5%; /* PRECARIOUS */
+}
+
+#filterText{
+	margin-left: 5%;
+	float:left;
+}
+
+#filterContainerButton{
+	color: white;
+	margin-right: 5%;
+	float: right;
+	background:none;
+	border:none;
+}
+
+#sortContainer{
+	padding-left: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	float: left;
+}
+
+#searchContainer{
+	padding-top: 0.75%;
+	padding-right: 5%;
+	float: right;
+}
+
+#expandableBoxContainer{
+	width:100%;
+	overflow: auto;
+}
+
+#expandableBox{
+	border-radius: 5px;	
+	color: white;
+	font-size: 80%;
+	background-color: #FF5252;
+	overflow: auto;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#foodtype{
+	margin-left: 5%;
+}
+
+#foodTypeForm2{
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+}
+
+#expandableBoxRightSection{
+	margin-top: 1%;
+	border-left: solid #FAFAFA;
+	border-left-width: 1px;
+	width:70%;
+	float: left;
+}
+
+#expandableBoxLeftSection{
+	margin-top: 1%;
+	width:25%;
+	float: left;
+}
+
+#expandableBoxForm{
+	float: left;
+	width:33%;
+}
+
+#nationality{
+	margin-left: 5%;
+}
+
+/*************** #3 Recipe List Section ***************/
+#itemsListContainer{
+	color: #424242;
+	width:100%;
+	margin-top: 2.5%;
+}
+
+#itemsList {
+ 	margin-left: 5%;
+ 	margin-right: 5%;
+  	text-align: center;
+}
+
+#returnToTop{
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	margin-left: 5%;
+	color: #FF5252;
+}
+
+/*************** #4 Newsletter/Add Friends Section ***************/
+#addFriendSectionContainer{
+	width: 100%;
+	background-color: #F44336;
+	margin-top: 2.5%;
+	overflow: auto;
+}
+
+#addFriendTitleContainer{
+	color: white;
+	margin-top: 2.5%;	
+}
+
+#addFriendTitle{
+	margin-left: 5%;
+	font-size: 200%;
+	margin-bottom: 2.5%;
+}
+
+#addFriendText{
+	margin-left: 5%;
+	margin-top: 2.5%
+}
+
+#firstFriendDetailsContainer{
+	color: white;
+	margin-left: 5%;
+	overflow: auto;
+	margin-left: 5%;
+	margin-top: 2.5%;
+}
+
+#firstNameContainer{
+	float: left;
+}
+
+.textInput{
+	height:4vh;
+	font-size: 80%;
+}
+
+#secondNameContainer{
+	margin-left: 5%;
+	float: left;
+}
+
+#emailContainer{
+	margin-left: 5%;
+	float: left;
+}
+
+#buttonContainer{
+	margin-left: 5%;
+	margin-top: 1.5%;
+	float: left;
+}
+
+#line{
+	width:90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+hr{
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+#submitButtonContainer{
+	margin-top: 2.5%;
+	text-align: center;
+	margin-bottom: 2.5%;
+}
+
+#sendButton{
+	width: 10%;
+}
+
+/*************** #5 Footer Section ***************/
+#footerContainer{
+	text-align: center;
+	width:100%;
+	background-color: #FAFAFA;
+	margin-top: 2.5%;
+}
+
+#footerLeft{
+	float: left;
+	margin-left: 5%;
+}
+
+#footerRight{
+	float: right;
+	margin-right: 5%;
+}
+
+.section{
+	margin-left: 5%;
+	margin-right: 5%;
+	color:#616161;
+	width: 10%;
+	float:left;
+	margin-bottom: 2.5%;
+}
+
+.headerH3{
+	margin-bottom: 15%;
+	font-size: 125%;
+}
+
+.headerH4{
+	margin-bottom: 15%;
+	font-size: 80%;
+}
+
+/*************** #6 Misc ***************/
+input{
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+label{
+	vertical-align: middle;
+}
