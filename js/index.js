@@ -130,7 +130,7 @@ for(var i = 0; i < recipeList.length; i++){
 	itemContainer.style.marginBottom="1%";
 	itemContainer.style.marginLeft="1.5";
 	itemContainer.style.marginRight="1.5%";
-	itemContainer.style.width="290px";
+	itemContainer.style.width="280px";
 
 
 	// Next div layer
